@@ -37,7 +37,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-keys.js
-node_modules
-client/node_modules
