@@ -16,10 +16,6 @@ export class AdListComponent implements OnInit {
       .subscribe(adsData => {
         this.ads = adsData;
         console.log(this.ads);
-
-        // let adsArray = Object.keys(adsData).map(function (adNamedIndex) {
-        //   let ad = adsData[adNamedIndex];
-        // });
       })
   }
 

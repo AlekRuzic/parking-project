@@ -1,8 +1,10 @@
-<app-header></app-header>
+<app-header (viewSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-ads></app-ads>
+      <app-ads *ngIf="loadedView === 'home'"></app-ads>
+      <app-create-ad *ngIf="loadedView === 'createAd'"></app-create-ad>
     </div>
   </div>
 </div>
+

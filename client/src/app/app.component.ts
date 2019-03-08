@@ -8,5 +8,11 @@ import { AdService } from './services/ads.service';
   providers: [AdService]
 })
 export class AppComponent {
-  title = 'client';
+  loadedView = 'home';
+
+  onNavigate(view: string) {
+    this.loadedView = view;
+  }
+
+  title = 'Pin Parking';
 }
