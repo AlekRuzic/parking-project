@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Ad } from "../../ad.model";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: "app-ad-tile",
@@ -7,9 +6,14 @@ import { Ad } from "../../ad.model";
   styleUrls: ["./ad-tile.component.css"]
 })
 export class AdTileComponent implements OnInit {
-  @Input() ad: Ad;
+  @Input() ad;
+  @Output() adSelected = new EventEmitter<void>();
 
   constructor() {}
 
   ngOnInit() {}
+
+  onSelected(ad) {
+    this.adSelected.emit();
+  }
 }

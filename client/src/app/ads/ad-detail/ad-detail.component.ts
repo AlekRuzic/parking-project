@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ad-detail',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ad-detail.component.css']
 })
 export class AdDetailComponent implements OnInit {
+  @Input() selectedAd;
 
   constructor() { }
 
   ngOnInit() {
+    console.log("selected ad is " + this.selectedAd);
   }
 
 }

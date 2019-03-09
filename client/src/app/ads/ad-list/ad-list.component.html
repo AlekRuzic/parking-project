@@ -3,6 +3,7 @@
     <app-ad-tile
       *ngFor="let ad of ads"
       [ad]="ad"
+      (adSelected)="onAdSelected(ad)"
     ></app-ad-tile>
   </div>
 </div>
