@@ -1,10 +1,9 @@
 <a href="#" class="list-group-item clearfix" (click)="onSelected()">
   <div class="pull-left">
     <h4 class="list-group-item-heading"> {{ ad.address }} </h4>
-    <p class="list-group-item-text"> {{ ad.description }} </p>
+    <p class="list-group-item-text overflowClass"> {{ ad.description }} </p>
   </div>
-  <span class="pull-right">
-    <h3>${{ ad.price }}</h3>
-    <!-- <img [src]="ad.image" alt="" class="img-responsive" style="max-height: 50px;"> -->
-  </span>
+    <span class="pull-right">
+    <h4 class="list-group-item-heading" style="color:darkred"> ${{ ad.price }} </h4>/month
+    </span>
 </a>

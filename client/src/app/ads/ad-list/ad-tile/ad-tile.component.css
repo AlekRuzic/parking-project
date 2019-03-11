@@ -1,0 +1,23 @@
+.address { grid-area: address; }
+.price { grid-area: price; }
+.description { grid-area: description; }
+
+.ad-tile-container {
+  display: grid;
+  grid-template-areas:
+    'address address address address price '
+    'description description description description  price';
+  grid-gap: 0px;
+  padding: 2px;
+}
+
+.pull-left {
+  width:80%;
+}
+
+.overflowClass {
+  height:20px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

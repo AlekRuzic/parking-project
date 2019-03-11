@@ -1,0 +1,9 @@
+footer {
+  padding-top:15px;
+  background-color:gray;
+  min-height: 8vh;
+}
+
+.footer-copyright {
+  color:lightgrey;
+}

@@ -11,6 +11,7 @@ import { AdTileComponent } from './ads/ad-list/ad-tile/ad-tile.component';
 import { HeaderComponent } from './header/header.component';
 import { CreateAdComponent } from './create-ad/create-ad.component';
 import { FormsModule } from '../../node_modules/@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '../../node_modules/@angular/forms';
     HeaderComponent,
     AdsComponent,
     CreateAdComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

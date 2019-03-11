@@ -12,7 +12,8 @@ export class HeaderComponent implements OnInit {
     this.viewSelected.emit(view);
   }
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
