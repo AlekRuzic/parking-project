@@ -10,6 +10,7 @@ import { AdListComponent } from './ads/ad-list/ad-list.component';
 import { AdTileComponent } from './ads/ad-list/ad-tile/ad-tile.component';
 import { HeaderComponent } from './header/header.component';
 import { CreateAdComponent } from './create-ad/create-ad.component';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { CreateAdComponent } from './create-ad/create-ad.component';
     AdTileComponent,
     HeaderComponent,
     AdsComponent,
-    CreateAdComponent
+    CreateAdComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

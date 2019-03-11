@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Ad = require('../models/Ad');
 
 router.get('/', (req, res) => {
+  console.log("index");
   Ad.find()
     .then(ads => res.json(ads))
     .catch(err => res.status(404).json({ noadsfound: 'No ads found' }));

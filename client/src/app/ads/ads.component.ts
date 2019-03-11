@@ -13,13 +13,4 @@ export class AdsComponent implements OnInit {
   ngOnInit() {
   }
 
-  // viewAd(selectedAd) {
-  //   let recipeName = recipe.querySelector("div h4").innerText;
-  //   let recipeDescription = recipe.querySelector("div p").innerText;
-  //   let recipeImagePath = recipe.querySelector("span img").src;
-  //   //let recipeImagePath = recipe.querySelector("")
-
-  //   this.selectedRecipe = new Recipe(recipeName, recipeDescription, recipeImagePath);
-  // }
-
 }

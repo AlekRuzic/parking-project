@@ -11,11 +11,10 @@ export class AdListComponent implements OnInit {
   @Output() adWasSelected = new EventEmitter<{}>();
   ads: any = [];
 
-  // Get Ads from database (using the adService)
+  //Get Ads from database (using the adService)
   constructor(private adService: AdService) {
     this.adService.getAds().subscribe(adsData => {
       this.ads = adsData;
-      console.log(this.ads);
     });
   }
 
@@ -23,6 +22,5 @@ export class AdListComponent implements OnInit {
 
   onAdSelected(ad) {
     this.adWasSelected.emit(ad);
-    console.log(ad);
   }
 }

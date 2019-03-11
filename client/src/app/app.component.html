@@ -3,8 +3,7 @@
   <div class="row">
     <div class="col-md-12">
       <app-ads *ngIf="loadedView === 'home'"></app-ads>
-      <app-create-ad *ngIf="loadedView === 'createAd'"></app-create-ad>
+      <app-create-ad *ngIf="loadedView === 'createAd'" (viewSelected)="onNavigate($event)"></app-create-ad>
     </div>
   </div>
 </div>
-

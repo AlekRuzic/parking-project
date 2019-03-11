@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
-const newAd = require('./routes/newad');
+const createad = require('./routes/createad');
 
 const app = express();
 const port = 3000;
@@ -27,15 +27,19 @@ mongoose
   .catch(err => console.log(err));
 
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "http://localhost:4200",
+    "http://localhost:4200/#"
+  );
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, DELETE, PUT');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 })
 
+app.use('/createad', createad);
 app.use('/', index);
-app.use('/new', newAd);
 
 app.listen(port, () => {
   console.log('Server running on port ' + port);
