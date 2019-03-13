@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 // Body parser middleware
 app.use(bodyParser.json());
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 // DB Config

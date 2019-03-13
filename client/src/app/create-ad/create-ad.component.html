@@ -17,7 +17,7 @@
 
   <div class="form-group">
     <label for="longitude">Image</label>
-    <input type="text" class="form-control" id="image" name="image" ngModel>
+    <input type="file" class="form-control" id="image" name="image" (change)="onImageSelected($event)">
   </div>
 
 
