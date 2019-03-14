@@ -13,12 +13,18 @@ export class AdService {
   }
 
   newAd(formData) {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': undefined,
+    //   })
+    // };
 
-    return this.http.post('http://localhost:3000/createad', formData, httpOptions);
+    const fd = new FormData();
+    fd.append('image', formData.image);
+    fd.append('price', formData.price);
+    fd.append('description', formData.description);
+    fd.append('address', formData.address);
+    console.log(fd);
+    return this.http.post('http://localhost:3000/createad', fd);
   }
 }

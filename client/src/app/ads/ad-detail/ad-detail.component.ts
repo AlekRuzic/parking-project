@@ -8,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AdDetailComponent implements OnInit {
   @Input() selectedAd;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
     console.log("selected ad is " + this.selectedAd);
+    this.selectedAd.image = 'http://localhost:3000/' + this.selectedAd.image;
   }
 
 }

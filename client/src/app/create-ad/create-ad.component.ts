@@ -21,10 +21,9 @@ export class CreateAdComponent implements OnInit {
     this.selectedImage = event.target.files[0];
   }
 
-
   createAd(formData: NgForm) {
     formData.form.value.image = this.selectedImage;
-    console.log(formData.form.value);
+    //console.log(formData.form.value);
     this.adService.newAd(formData.form.value)
       .subscribe(ads => {
         console.log('made it this far');
